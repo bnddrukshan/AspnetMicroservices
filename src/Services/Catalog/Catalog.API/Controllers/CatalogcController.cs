@@ -10,13 +10,13 @@ namespace Catelog.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CatalogcController : ControllerBase
+    public class CatalogController : ControllerBase
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<CatalogController> _logger;
         private readonly IProductRepository _repository;
 
-        public CatalogcController(
-            ILogger logger,
+        public CatalogController(
+            ILogger<CatalogController> logger,
             IProductRepository productRepository)
         {
             _logger = logger;
